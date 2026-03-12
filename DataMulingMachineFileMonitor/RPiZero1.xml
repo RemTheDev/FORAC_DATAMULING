@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
+  <name>RPiZero1</name>
+  <SSIDConfig>
+    <SSID>
+      <hex>535349445F46524F4D5F434F4E464947</hex>
+      <name>SSID_FROM_CONFIG</name>
+    </SSID>
+  </SSIDConfig>
+  <connectionType>ESS</connectionType>
+  <connectionMode>auto</connectionMode>
+  <MSM>
+    <security>
+      <authEncryption>
+        <authentication>WPAPSK</authentication>
+        <encryption>AES</encryption>
+        <useOneX>false</useOneX>
+      </authEncryption>
+      <sharedKey>
+        <keyType>passPhrase</keyType>
+        <protected>false</protected>
+        <keyMaterial>PASSWORD_FROM_CONFIG</keyMaterial>
+      </sharedKey>
+    </security>
+  </MSM>
+  <MacRandomization xmlns="http://www.microsoft.com/networking/WLAN/profile/v3">
+    <enableRandomization>false</enableRandomization>
+  </MacRandomization>
+</WLANProfile>

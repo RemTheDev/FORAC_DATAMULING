@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.3.11520.95 d18.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataMulingFilePackager", "DataMulingFilePackager\DataMulingFilePackager.csproj", "{25020B14-C95E-F523-EB5E-9F500BA427E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataMulingMachineFileMonitor", "DataMulingMachineFileMonitor\DataMulingMachineFileMonitor.csproj", "{64FF456E-F04A-AE00-7653-6A3586FC8F38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataMulingPackageDB", "DataMulingPackageDB\DataMulingPackageDB.csproj", "{01419BBA-B82E-0D76-CA2F-1158C9EB9D14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataMuling-TCPServer-Service", "DataMuling-TCPServer-Service\DataMuling-TCPServer-Service.csproj", "{81DF40D1-AB8D-C245-F053-30FBE1FE1B97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FORAC.Utility", "FORAC.Utility\FORAC.Utility.csproj", "{6EDA48B3-DBAA-AF98-B481-EAAD28878FAC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{25020B14-C95E-F523-EB5E-9F500BA427E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25020B14-C95E-F523-EB5E-9F500BA427E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25020B14-C95E-F523-EB5E-9F500BA427E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25020B14-C95E-F523-EB5E-9F500BA427E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64FF456E-F04A-AE00-7653-6A3586FC8F38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64FF456E-F04A-AE00-7653-6A3586FC8F38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64FF456E-F04A-AE00-7653-6A3586FC8F38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64FF456E-F04A-AE00-7653-6A3586FC8F38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01419BBA-B82E-0D76-CA2F-1158C9EB9D14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01419BBA-B82E-0D76-CA2F-1158C9EB9D14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01419BBA-B82E-0D76-CA2F-1158C9EB9D14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01419BBA-B82E-0D76-CA2F-1158C9EB9D14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81DF40D1-AB8D-C245-F053-30FBE1FE1B97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81DF40D1-AB8D-C245-F053-30FBE1FE1B97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81DF40D1-AB8D-C245-F053-30FBE1FE1B97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81DF40D1-AB8D-C245-F053-30FBE1FE1B97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EDA48B3-DBAA-AF98-B481-EAAD28878FAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EDA48B3-DBAA-AF98-B481-EAAD28878FAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EDA48B3-DBAA-AF98-B481-EAAD28878FAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EDA48B3-DBAA-AF98-B481-EAAD28878FAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B2A5882C-C7D7-41FB-8BD2-B172962F6E06}
+	EndGlobalSection
+EndGlobal

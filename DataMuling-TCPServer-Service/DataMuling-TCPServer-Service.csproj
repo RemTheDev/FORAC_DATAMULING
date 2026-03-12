@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-DataMuling_TCPServer_Service-a14c6499-9a8c-464b-9986-bfbf7b10b391</UserSecretsId>
+    <RootNamespace>DataMuling_TCPServer_Service</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Systemd" Version="10.0.3" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.16.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DataMulingPackageDB\DataMulingPackageDB.csproj" />
+  </ItemGroup>
+</Project>
