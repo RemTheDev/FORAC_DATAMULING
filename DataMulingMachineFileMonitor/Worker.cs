@@ -6,7 +6,6 @@ namespace DataMulingMachineFileMonitor
     {
         private readonly ILogger<Worker> _logger;
         private readonly IConfiguration _configuration;
-        private WifiChecker _wifiChecker;
         private PollingFileCopier _fileCopier;
         private FileSystemWatcher _fileWatcher;
 
@@ -35,7 +34,6 @@ namespace DataMulingMachineFileMonitor
             this.filePollingIntervalSeconds = int.Parse(this._configuration.GetSection("FileCopyPollingIntervalSeconds").Value);
             this.autoReconnectToDataMulingNetwork = this._configuration.GetSection("AutoReconnectToDataMulingNetwork").Value.ToLower() == "true";
 
-            this._wifiChecker = new WifiChecker();
             this._fileCopier = new PollingFileCopier(this.filePollingIntervalSeconds);
         }
 
@@ -99,9 +97,10 @@ namespace DataMulingMachineFileMonitor
                 {
                     bool driveMapped = false;
                     bool wifiConnected = false;
+                    WifiChecker wifiChecker = new WifiChecker();
                     while (!stoppingToken.IsCancellationRequested && (!wifiConnected || !driveMapped))
                     {
-                        wifiConnected = this._wifiChecker.isConnected(dataMulingNetworkSSID);
+                        wifiConnected = wifiChecker.isConnected(dataMulingNetworkSSID);
                         if (!wifiConnected)
                         {
                             logMsg($"Wifi not connected to SSID '{dataMulingNetworkSSID}'.", true);
@@ -170,7 +169,7 @@ namespace DataMulingMachineFileMonitor
 
                         while (!stoppingToken.IsCancellationRequested)
                         {
-                            if (this._wifiChecker.isConnected(dataMulingNetworkSSID))
+                            if (wifiChecker.isConnected(dataMulingNetworkSSID))
                                 this._fileCopier.CopyReadyFilesToOutput(this.dataMulingSharedFolder, stoppingToken, logMsg);
                             else
                                 throw new Exception("Lost Wifi Connection. Retrying..."); //Allows to go back to wifi loop check and reset the FileSystemWatcher
