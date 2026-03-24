@@ -103,11 +103,9 @@ namespace DataMulingMachineFileMonitor
                         wifiConnected = wifiChecker.isConnected(dataMulingNetworkSSID);
                         if (!wifiConnected)
                         {
-                            logMsg($"Wifi not connected to SSID '{dataMulingNetworkSSID}'.", true);
-
                             if(this.autoReconnectToDataMulingNetwork)
                             {
-                                logMsg("Attempting connection...", false);
+                                logMsg($"Wifi not connected to SSID '{dataMulingNetworkSSID}'. Attempting connection...", true);
                                 this.RunCMDCommand(new ProcessStartInfo
                                 {
                                     FileName = Path.Combine(Environment.SystemDirectory, "netsh.exe"),
@@ -117,6 +115,8 @@ namespace DataMulingMachineFileMonitor
                                     RedirectStandardOutput = true
                                 });
                             }
+                            else
+                                logMsg($"Wifi not connected to SSID '{dataMulingNetworkSSID}'. Auto-reconnect setting is off", true);
                         }
                         else
                         {
@@ -130,7 +130,7 @@ namespace DataMulingMachineFileMonitor
                             }
                             catch (Exception e)
                             {
-                                logMsg($"Network drive access failed! Attempting to create mapping...", false);
+                                logMsg($"Network drive access failed! Attempting to create mapping...", true);
 
                                 this.RunCMDCommand(new ProcessStartInfo
                                 {
