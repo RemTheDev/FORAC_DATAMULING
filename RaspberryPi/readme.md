@@ -11,7 +11,8 @@ Ce document décrit les étapes de déploiement et de configuration du Raspberry
 - le déploiement du **serveur TCP** ;
 - la configuration de l’exécution périodique du **File Packager**.
 
-Une image d'un Raspberry Pi déployé peut être téléchargée ici : https://apps.forac.ulaval.ca/foracid/content/Datamuling_Pi.zip
+Une image d'un Raspberry Pi déployé peut être téléchargée ici : 
+https://1drv.ms/u/c/e1bc7463ab8d178d/IQCMy3tRbIgURpDZgh4Jm8uEAVcoijG4mzvBSonb6v5TY0c?e=lmYYjR
 
 ## Vue d’ensemble
 
